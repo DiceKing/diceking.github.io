@@ -9,7 +9,7 @@ var config = {
   app_name: 'DiceKing',
   // - For your faucet to work, you must register your site at Recaptcha
   // - https://www.google.com/recaptcha/intro/index.html
-  recaptcha_sitekey: '6LdBrQoUAAAAAK1vo42m9e-bRLrrMDIN_G221Vhd',  // <----- EDIT ME!
+  recaptcha_sitekey: '6LdTrAoUAAAAAP4I0AZbeAL_-ycVvLCAf8nL-Z46',  // <----- EDIT ME!
   redirect_uri: 'https://diceking.github.io',
   mp_browser_uri: 'https://www.moneypot.com',
   mp_api_uri: 'https://api.moneypot.com',
@@ -21,7 +21,7 @@ var config = {
   force_https_redirect: !isRunningLocally(),
   // - Configure the house edge (default is 1%)
   //   Must be between 0.0 (0%) and 1.0 (100%)
-  house_edge: 0.01,
+  house_edge: 0.05,
   chat_buffer_size: 250,
   // - The amount of bets to show on screen in each tab
   bet_buffer_size: 25
@@ -1181,7 +1181,7 @@ var BetBoxMultiplier = React.createClass({
     if (isNaN(num) || !isFloatRegexp.test(newStr)) {
       Dispatcher.sendAction('UPDATE_MULTIPLIER', { error: 'INVALID_MULTIPLIER' });
       // Ensure multiplier is >= 1.00x
-    } else if (num < 1.01) {
+    } else if (num < 1.001) {
       Dispatcher.sendAction('UPDATE_MULTIPLIER', { error: 'MULTIPLIER_TOO_LOW' });
       // Ensure multiplier is <= max allowed multiplier (100x for now)
     } else if (num > 9900) {
@@ -1862,7 +1862,7 @@ var FaucetTabContent = React.createClass({
         !!worldStore.state.grecaptcha ? '' : 'Loading...'
       );
       break;
-    case 'ENJOY YOUR FREE BTC <3':
+    case 'SUCCESSFULLY_CLAIMED':
       innerNode = el.div(
         null,
         'Successfully claimed ' + this.state.claimAmount/100 + ' bits.' +
