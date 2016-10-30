@@ -9,7 +9,7 @@ var config = {
   app_name: 'DiceKing',
   // - For your faucet to work, you must register your site at Recaptcha
   // - https://www.google.com/recaptcha/intro/index.html
-  recaptcha_sitekey: '6LfI_QUTAAAAACrjjuzmLw0Cjx9uABxb8uguLbph',  // <----- EDIT ME!
+  recaptcha_sitekey: '6LdTrAoUAAAAAP4I0AZbeAL_-ycVvLCAf8nL-Z46',  // <----- EDIT ME!
   redirect_uri: 'https://diceking.github.io',
   mp_browser_uri: 'https://www.moneypot.com',
   mp_api_uri: 'https://api.moneypot.com',
