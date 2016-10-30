@@ -21,7 +21,7 @@ var config = {
   force_https_redirect: !isRunningLocally(),
   // - Configure the house edge (default is 1%)
   //   Must be between 0.0 (0%) and 1.0 (100%)
-  house_edge: 0.05,
+  house_edge: 0.01,
   chat_buffer_size: 250,
   // - The amount of bets to show on screen in each tab
   bet_buffer_size: 25
@@ -1862,7 +1862,7 @@ var FaucetTabContent = React.createClass({
         !!worldStore.state.grecaptcha ? '' : 'Loading...'
       );
       break;
-    case 'SUCCESSFULLY_CLAIMED':
+    case 'ENJOY YOUR FREE BTC <3':
       innerNode = el.div(
         null,
         'Successfully claimed ' + this.state.claimAmount/100 + ' bits.' +
