@@ -6,7 +6,7 @@ var config = {
   // - Your app's id on moneypot.com
   app_id: 2372,                             // <----------------------------- EDIT ME!
   // - Displayed in the navbar
-  app_name: 'DiceKing',
+  app_name: 'TutDice',
   // - For your faucet to work, you must register your site at Recaptcha
   // - https://www.google.com/recaptcha/intro/index.html
   recaptcha_sitekey: '6LdAwQoUAAAAAGpwK9ZVrF8nRaa2lGfzV8Yuy9Ae',  // <----- EDIT ME!
